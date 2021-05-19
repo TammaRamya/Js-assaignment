@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>conversion of temprature</title>
+<script type="text/javascript">
+function convertofTemp()
+{
+var temp=document.getElementById("numb").value;
+if(isNaN(temp))
+{
+document.writeln("please enter valid no");
+}
+else
+{
+if(rd1.checked==true)
+{
+var result=((temp-32)*5/9);
+document.getElementsByName('display')[0].value= result;
+}
+else if(rd2.checked==true)
+{
+var result=((temp*9/5)+32);
+document.getElementsByName('display')[0].value= result;
+}
+}
+}
+</script>
+</head>
+<body>
+Degrees: 
+<br><input id="numb" placeholder="enter any no">
+&#160;&#160;&#160;&#160;&#160;Type:<input id="rd1" name="g" type="radio">Fahrenheit</input>
+<input id="rd2" name="g" type="radio">celsius</input>
+&#160;&#160;&#160;&#160;&#160;<button onclick="convertofTemp()">convert</button>
+<br>
+<br>
+<label for="displayValue">Result: </label>
+<br>
+<input type="textbox" name="display">
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Counter</title>
+<h1>counter</h1>
+
+<script type="text/javascript">
+var count=0;
+function Increase()
+{
+count=count+1;
+if(count>=0)
+{
+document.getElementById("display").style.fontSize = '50px';
+document.getElementById("display").style.color="green";
+document.getElementById("display").innerHTML =count;
+}
+else
+{
+document.getElementById("display").style.fontSize = '50px';
+document.getElementById("display").innerHTML = count;
+}
+}
+function Decrease()
+{
+count=count-1;
+if(count<0)
+{
+document.getElementById("display").style.fontSize = '50px';
+document.getElementById("display").style.color="red";
+document.getElementById("display").innerHTML = count;
+}
+else
+{
+document.getElementById("display").style.fontSize = '50px';
+document.getElementById("display").innerHTML = count;
+}
+}
+function Reset()
+{
+count=0;
+document.getElementById("display").style.fontSize = '50px';
+document.getElementById("display").innerHTML =count;
+}
+</script>
+</head>
+<body>
+<p id="display"></p>
+<br>
+<br>
+<button onclick="Increase()">Increase</button>
+<button onclick="Decrease()">Decrease</button>
+<button onclick="Reset()">Reset</button>
+</body>
+</html>

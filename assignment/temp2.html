@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>conversion of temprature</title>
+<script type="text/javascript">
+function convertofTemp()
+{
+var tempvalue=document.getElementById("numb").value;
+var select=document.getElementById("select box");
+var mode=select.options[select.selectedIndex].value;
+if(isNaN(tempvalue))
+{
+document.writeln("please enter valid no");
+}
+else
+{
+if(mode==="Foreignheat")
+{
+
+var result=((tempvalue-32)*5/9);
+result=result+"C";
+document.getElementsByName('display')[0].value= result;
+}
+else if(mode==="celsisus")
+{
+var result=((tempvalue*9/5)+32);
+result=result+"f";
+document.getElementsByName('display')[0].value= result;
+}
+}
+}
+</script>
+</head>
+<body>
+Degrees: <input id="numb" placeholder="enter any no">
+<br>
+<br>
+Type:
+<select id="select box">
+<option value="Foreignheat">Foreignheat</option>
+<option value="celsisus">celsisus</option>
+</select>
+<br>
+<br>
+<button onclick="convertofTemp()">convert</button>
+<br>
+<br>
+<label for="displayValue">Result: </label><input type="textbox" name="display">
+</body>
+</html>
